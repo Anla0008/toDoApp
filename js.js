@@ -38,12 +38,15 @@ function showToDo(listToShow) {
       }
 
       if (evt.target.classList.contains("delete_item")) {
-        console.log("Delete", task.id);
         const indexOfToDelete = toDoArray.findIndex((elm) => elm.id === task.id);
-        let deleteItem = toDoArray.splice(indexOfToDelete, 1);
-        console.log(toDoArray);
-        console.log(deleteItem);
-        filterAndSort();
+        const liToRemove = evt.target.closest("li");
+
+        liToRemove.classList.add("fade-out");
+
+        setTimeout(() => {
+          toDoArray.splice(indexOfToDelete, 1);
+          filterAndSort();
+        }, 500);
       }
     });
 

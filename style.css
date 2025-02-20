@@ -97,3 +97,9 @@ ul li.editMode input[type="text"] {
 ul li.editMode label {
   display: none;
 }
+
+.fade-out {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.5s, transform 0.5s;
+}
