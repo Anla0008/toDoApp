@@ -98,6 +98,8 @@ ul li.editMode label {
   display: none;
 }
 
+/* Animation af delete */
+
 .fade-out {
   opacity: 0;
   transform: scale(0.9);
